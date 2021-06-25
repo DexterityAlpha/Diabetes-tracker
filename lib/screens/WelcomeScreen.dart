@@ -8,30 +8,45 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IntroductionScreen(
-      done: Text("Done", style: TextStyle(fontWeight: FontWeight.w600)),
+      globalBackgroundColor: Theme.of(context).backgroundColor,
+      color: Colors.red.shade600,
+      doneColor: Colors.green.shade700,
+      isTopSafeArea: true,
+      dotsDecorator: DotsDecorator(activeColor: Colors.blue.shade900),
+      done: Text("Done",
+          style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18)),
       controlsPadding: const EdgeInsets.all(16),
       onDone: () {},
-      next: Text("Next", style: TextStyle(fontWeight: FontWeight.w600)),
+      next: Text(
+        "Next",
+        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+      ),
       pages: [
         PageViewModel(
-            title: "",
+            title: "Welcome to DiaBit",
             image: Lottie.asset("assets/lottieFiles/heart2.zip",
                 fit: BoxFit.contain),
-            body: ""),
+            body:
+                "A personal diabetes tracking app which keeps track of your sugar level "),
         PageViewModel(
-            title: "",
+            title: "Meet Alex",
             image: Lottie.asset("assets/lottieFiles/doctorApp.zip",
                 fit: BoxFit.contain),
-            body: ""),
+            body:
+                "Your personal chat bot. It will answer all your questions regarding diabetes"),
         PageViewModel(
-            title: "",
-            image:
-                Lottie.asset("assets/lottieFiles/doctor2.zip", repeat: false),
-            body: ""),
+            title: "Food AI",
+            image: Lottie.asset(
+              "assets/lottieFiles/doctor2.zip",
+              fit: BoxFit.contain,
+              reverse: true,
+            ),
+            body: "Click Pictures and get glucose analysis"),
         PageViewModel(
-            title: "",
+            title: "Blood Sugar Loss",
             image: Lottie.asset("assets/lottieFiles/doctor3.zip"),
-            body: ""),
+            body:
+                "Instantly create your blood sugar logs and get accurate analysis and stats"),
       ],
     );
   }

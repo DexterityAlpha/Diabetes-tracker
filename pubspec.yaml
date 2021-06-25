@@ -24,7 +24,9 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  flutter_hex_color: ^2.0.0
   flutter_native_splash: ^1.2.0
+  google_fonts: ^2.1.0
   introduction_screen: ^2.1.0
   lottie: ^1.0.1
 
@@ -92,9 +94,9 @@ flutter_native_splash:
   # parameters from above. If the image_dark parameter is specified, color_dark or 
   # background_image_dark must be specified.  color_dark and background_image_dark cannot both be
   # set.
-  #color_dark: "#042a49"
+  color_dark: "#181818"
   #background_image_dark: "assets/dark-background.png"
-  #image_dark: assets/splash-invert.png
+  image_dark: assets/images/splash2.png
   # The android, ios and web parameters can be used to disable generating a splash screen on a given 
   # platform.
   #android: false

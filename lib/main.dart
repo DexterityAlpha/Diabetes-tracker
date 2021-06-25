@@ -1,3 +1,4 @@
+import 'package:diabetes_tracker/themes.dart';
 import 'package:flutter/material.dart';
 import 'screens/WelcomeScreen.dart';
 
@@ -6,11 +7,12 @@ void main() {
 }
 
 class Main extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'DiaBit  ',
+      themeMode: ThemeMode.system,
+      theme: DiaBitTheme.lightTheme(context),
+      darkTheme: DiaBitTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
       home: WelcomeScreen(),
     );
