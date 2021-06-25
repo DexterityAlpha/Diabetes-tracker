@@ -1,3 +1,4 @@
+import 'package:diabetes_tracker/screens/LoginScreen.dart';
 import 'package:diabetes_tracker/themes.dart';
 import 'package:flutter/material.dart';
 import 'screens/WelcomeScreen.dart';
@@ -15,6 +16,9 @@ class Main extends StatelessWidget {
       darkTheme: DiaBitTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
       home: WelcomeScreen(),
+      routes: {
+        LoginScreen.routename: (context) => LoginScreen(),
+      },
     );
   }
 }

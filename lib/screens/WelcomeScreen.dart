@@ -1,3 +1,4 @@
+import 'package:diabetes_tracker/screens/LoginScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:lottie/lottie.dart';
@@ -16,7 +17,9 @@ class WelcomeScreen extends StatelessWidget {
       done: Text("Done",
           style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18)),
       controlsPadding: const EdgeInsets.all(16),
-      onDone: () {},
+      onDone: () {
+        Navigator.of(context).pushReplacementNamed(LoginScreen.routename);
+      },
       next: Text(
         "Next",
         style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
