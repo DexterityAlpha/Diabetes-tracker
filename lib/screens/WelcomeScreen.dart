@@ -44,7 +44,7 @@ class WelcomeScreen extends StatelessWidget {
               fit: BoxFit.contain,
               reverse: true,
             ),
-            body: "Click Pictures and get glucose analysis"),
+            body: "Get real-time analysis of your food"),
         PageViewModel(
             title: "Blood Sugar Loss",
             image: Lottie.asset("assets/lottieFiles/doctor3.zip"),

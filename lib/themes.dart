@@ -7,6 +7,7 @@ class DiaBitTheme {
         brightness: Brightness.light,
         fontFamily: GoogleFonts.nunito().fontFamily,
         backgroundColor: creamcolor,
+        buttonColor: Colors.blue.shade800,
         appBarTheme: AppBarTheme(
           backgroundColor: greyishcolor1,
           backwardsCompatibility: true,
@@ -21,6 +22,7 @@ class DiaBitTheme {
         fontFamily: GoogleFonts.nunito().fontFamily,
         backgroundColor: HexColor("#121212"),
         accentColor: Colors.blue.shade900,
+        buttonColor: Colors.blue.shade800,
         appBarTheme: AppBarTheme(
           backwardsCompatibility: true,
           centerTitle: false,
