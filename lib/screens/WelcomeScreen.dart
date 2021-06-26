@@ -4,12 +4,18 @@ import 'package:introduction_screen/introduction_screen.dart';
 import 'package:lottie/lottie.dart';
 
 class WelcomeScreen extends StatelessWidget {
- 
   @override
   Widget build(BuildContext context) {
     return IntroductionScreen(
       globalBackgroundColor: Theme.of(context).backgroundColor,
       color: Colors.red.shade600,
+      showSkipButton: true,
+      skip: Text("Skip",
+          style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18)),
+      skipColor: Colors.purple.shade900,
+      onSkip: () {
+        Navigator.of(context).pushReplacementNamed(LoginScreen.routename);
+      },
       doneColor: Colors.green.shade700,
       isTopSafeArea: true,
       dotsDecorator: DotsDecorator(activeColor: Colors.blue.shade900),
