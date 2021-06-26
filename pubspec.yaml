@@ -18,15 +18,18 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.11.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  flutter_appauth: ^1.0.0+1
   flutter_hex_color: ^2.0.0
   flutter_native_splash: ^1.2.0
+  flutter_secure_storage: ^4.2.0
   google_fonts: ^2.1.0
+  http: ^0.13.3
   introduction_screen: ^2.1.0
   lottie: ^1.0.1
 
@@ -88,7 +91,7 @@ flutter_native_splash:
   # the leading # character.
   # The image parameter allows you to specify an image used in the splash screen.  It must be a 
   # png file.  
-  image: assets/images/splash2.png
+  image: assets/images/splash3.png
   # The color_dark, background_image_dark, and image_dark are parameters that set the background
   # and image when the device is in dark mode. If they are not specified, the app will use the
   # parameters from above. If the image_dark parameter is specified, color_dark or 
@@ -96,7 +99,7 @@ flutter_native_splash:
   # set.
   color_dark: "#181818"
   #background_image_dark: "assets/dark-background.png"
-  image_dark: assets/images/splash2.png
+  image_dark: assets/images/splash3.png
   # The android, ios and web parameters can be used to disable generating a splash screen on a given 
   # platform.
   #android: false

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class LoginScreen extends StatelessWidget {
   static const routename = "/loginscreen";
 
@@ -27,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                   child: Center(
                     child: Text(
                       "Login",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
+                      style: Theme.of(context).textTheme.headline6!.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   )),
