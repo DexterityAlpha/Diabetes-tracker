@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class LoginScreen extends StatelessWidget {
   static const routename = "/loginscreen";
 
@@ -13,7 +12,7 @@ class LoginScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           FittedBox(
-            child: Image.asset("assets/images/splash2.png"),
+            child: Image.asset("assets/images/splash3.png"),
           ),
           Padding(
             padding: const EdgeInsets.all(24.0),
