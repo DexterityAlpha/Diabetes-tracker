@@ -8,12 +8,17 @@ class DiaBitTheme {
         fontFamily: GoogleFonts.nunito().fontFamily,
         backgroundColor: creamcolor,
         buttonColor: Colors.blue.shade800,
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: Colors.white,
+          selectedIconTheme: IconThemeData(color: Colors.red.shade800),
+        ),
         appBarTheme: AppBarTheme(
-          backgroundColor: greyishcolor1,
+          backgroundColor: creamcolor,
           backwardsCompatibility: true,
           centerTitle: false,
           elevation: 0.0,
           brightness: Brightness.light,
+          iconTheme: IconThemeData(color: blackShade),
         ),
       );
 
@@ -24,10 +29,12 @@ class DiaBitTheme {
         accentColor: Colors.blue.shade900,
         buttonColor: Colors.blue.shade800,
         appBarTheme: AppBarTheme(
-          backwardsCompatibility: true,
+          backgroundColor: HexColor("#121212"),
+          // backwardsCompatibility: true,
           centerTitle: false,
           elevation: 0.0,
           brightness: Brightness.dark,
+          iconTheme: IconThemeData(color: Colors.white),
         ),
       );
 

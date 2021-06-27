@@ -1,3 +1,4 @@
+import 'package:diabetes_tracker/pages/HomePage.dart';
 import 'package:diabetes_tracker/providers/authentication.dart';
 import 'package:diabetes_tracker/screens/LoginScreen.dart';
 import 'package:diabetes_tracker/themes.dart';
@@ -22,6 +23,7 @@ class Main extends StatelessWidget {
         home: WelcomeScreen(),
         routes: {
           LoginScreen.routename: (context) => LoginScreen(),
+          HomePage.routname: (context) => HomePage(),
         },
       ),
     );

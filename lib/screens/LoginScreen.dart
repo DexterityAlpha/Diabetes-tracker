@@ -1,6 +1,6 @@
+import 'package:diabetes_tracker/pages/HomePage.dart';
 import 'package:diabetes_tracker/providers/authentication.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 // It's broken I guess due to some file name issue . Just Fuck it
 class LoginScreen extends StatelessWidget {
@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var login = Provider.of<Authentication>(context);
+    // var login = Provider.of<Authentication>(context);
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       body: Column(
@@ -32,12 +32,13 @@ class LoginScreen extends StatelessWidget {
                           Theme.of(context).buttonColor),
                       padding: MaterialStateProperty.all(EdgeInsets.all(16))),
                   onPressed: () async {
-                    await login.loginAction();
+                    Navigator.of(context)
+                        .pushReplacementNamed(HomePage.routname);
                   },
                   child: Center(
                     child: Text(
                       "Login",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
+                      style: Theme.of(context).textTheme.headline6!.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   )),

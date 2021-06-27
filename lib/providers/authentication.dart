@@ -16,9 +16,9 @@ const AUTH0_ISSUER = 'https://$AUTH0_DOMAIN';
 class Authentication with ChangeNotifier {
   bool isBusy = false;
   bool isLoggedIn = false;
-  String errorMessage;
-  String name;
-  String picture;
+  String ? errorMessage;
+  String ? name;
+  String ? picture;
 
   Map<String, dynamic> parseIdToken(String idToken) {
     final parts = idToken.split(r'.');
@@ -49,7 +49,7 @@ class Authentication with ChangeNotifier {
     errorMessage = '';
 
     try {
-      final AuthorizationTokenResponse result =
+      final AuthorizationTokenResponse? result =
           await appAuth.authorizeAndExchangeCode(
         AuthorizationTokenRequest(AUTH0_CLIENT_ID, AUTH0_REDIRECT_URI,
             issuer: 'https://$AUTH0_DOMAIN',
@@ -57,7 +57,7 @@ class Authentication with ChangeNotifier {
             promptValues: ['login']),
       );
       print(result);
-      final idToken = parseIdToken(result.idToken.toString());
+      final idToken = parseIdToken(result!.idToken.toString());
       final profile = await getUserDetails(result.accessToken.toString());
 
       await secureStorage.write(
@@ -103,7 +103,7 @@ class Authentication with ChangeNotifier {
         refreshToken: storedRefreshToken,
       ));
 
-      final idToken = parseIdToken(response.idToken.toString());
+      final idToken = parseIdToken(response!.idToken.toString());
       final profile = await getUserDetails(response.accessToken.toString());
 
       secureStorage.write(key: 'refresh_token', value: response.refreshToken);
